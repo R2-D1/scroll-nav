@@ -1,0 +1,238 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    margin-bottom: 30px;
+}
+
+.container {
+    width: 100%;
+    max-width: 830px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/********************] PAGE [********************/
+
+.page__body {
+    background-color: #000;
+    color: #ebebeb;
+    scroll-behavior: smooth;
+    font-size: 18px;
+    font-family: Roboto, sans-serif;
+    line-height: 1.5;
+}
+
+/********************] HEADER [********************/
+
+.header {
+    position: relative;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 20px;
+}
+
+.header__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    color: #000;
+    border-radius: 100px;
+    padding: 15px;
+}
+
+.header__logo {
+    width: 50px;
+}
+
+.header__logo-image {
+    display: block;
+}
+
+/********************] NAVIGATION [********************/
+
+.nav__overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: -1;
+}
+
+.nav__burger {
+    margin-right: 10px;
+}
+
+.nav__container {
+    @media screen and (width < 800px) {
+        & {
+            display: none;
+            position: fixed;
+            inset: 120px 15px 15px;
+            background-color: #fff;
+            border-radius: 40px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+        }
+    }
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    gap: 5px;
+}
+
+.nav__link {
+    display: block;
+    border-radius: 30px;
+    padding: 2px 5px;
+}
+
+.nav__link.nav__link_active,
+.nav__link:hover,
+.nav__link:active {
+    background-color: #000;
+    color: #fff;
+
+}
+
+.nav__link {
+    color: #000;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav_active {
+    @media (width < 800px) {
+        .nav__container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav__list {
+            flex-direction: column;
+        }
+
+        .nav__overlay {
+            display: block;
+        }
+    }
+
+}
+
+/************] BURGER [************/
+
+.burger {
+    height: 25px;
+    cursor: pointer;
+    display: none;
+    flex-flow: column;
+    justify-content: space-around;
+    width: 45px;
+    z-index: 10;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+    background: transparent;
+    border: none;
+
+    @media screen and (width < 800px) {
+        & {
+            display: flex;
+        }
+    }
+}
+
+.burger__layer {
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background: #000;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+}
+
+.burger__layer:nth-child(1) {
+    top: 0;
+}
+
+.burger__layer:nth-child(2),
+.burger__layer:nth-child(3) {
+    top: 10px;
+}
+
+.burger__layer:nth-child(4) {
+    top: 20px;
+}
+
+.burger_active .burger__layer:nth-child(1) {
+    top: 18px;
+    width: 0;
+    left: 50%;
+}
+
+.burger_active .burger__layer:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.burger_active .burger__layer:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.burger_active .burger__layer:nth-child(4) {
+    top: 18px;
+    width: 0;
+    left: 50%;
+}
+
+/********************] SECTION [********************/
+
+.section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.section:nth-child(2n) {
+    background-color: #f2f2f2;
+    color: #000;
+}
+
+.section__title {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/********************] HERO [********************/
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__title {
+    margin-bottom: 50px;
+    font-size: 100px;
+    text-align: center;
+}
+
+.hero__description {
+    text-align: center;
+}
