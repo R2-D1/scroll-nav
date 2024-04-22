@@ -21,27 +21,27 @@
                         </svg>
                     </a>
                 </div>
-                <nav class="nav">
-                    <div class="nav__overlay"></div>
-                    <button class="burger nav__burger">
+                <nav class="nav" id="js-nav">
+                    <div class="nav__overlay" id="js-nav-overlay"></div>
+                    <button class="burger nav__burger" id="js-nav-toggle">
                         <div class="burger__layer"></div>
-                        <div class="burger__layer"></div>
+                        <div class="burger__layer burger__layer_xl"></div>
                         <div class="burger__layer"></div>
                         <div class="burger__layer"></div>
                     </button>
                     <div class="nav__container">
                         <ul class="nav__list">
                             <li class="nav__item">
-                                <a class="nav__link" href="#about-us">ABOUT</a>
+                                <a class="nav__link js-nav-link" href="#about-us">ABOUT</a>
                             </li>
                             <li class="nav__item">
-                                <a class="nav__link" href="#reviews">REVIEWS</a>
+                                <a class="nav__link js-nav-link" href="#reviews">REVIEWS</a>
                             </li>
                             <li class="nav__item">
-                                <a class="nav__link" href="#team">TEAM</a>
+                                <a class="nav__link js-nav-link" href="#team">TEAM</a>
                             </li>
-                            <li class="nav__item nav__item_active">
-                                <a class="nav__link" href="#contacts">CONTACT US</a>
+                            <li class="nav__item">
+                                <a class="nav__link js-nav-link" href="#contacts">CONTACT US</a>
                             </li>
                         </ul>
                     </div>
@@ -160,6 +160,7 @@
             </div>
         </section>
     </main>
+    <script src="./scripts.js"></script>
 </body>
 
 </html>

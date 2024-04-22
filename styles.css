@@ -24,6 +24,10 @@ p {
 
 /********************] PAGE [********************/
 
+.page {
+    scroll-behavior: smooth;
+}
+
 .page__body {
     background-color: #000;
     color: #ebebeb;
@@ -31,6 +35,11 @@ p {
     font-size: 18px;
     font-family: Roboto, sans-serif;
     line-height: 1.5;
+}
+
+/********************] CANCEL ELEMENT SCROLL [********************/
+.no-scroll {
+    overflow: hidden;
 }
 
 /********************] HEADER [********************/
@@ -80,7 +89,8 @@ p {
         & {
             display: none;
             position: fixed;
-            inset: 120px 15px 15px;
+            inset: 120px 15px auto;
+            padding: 50px 15px;
             background-color: #fff;
             border-radius: 40px;
             text-align: center;
@@ -104,8 +114,7 @@ p {
 }
 
 .nav__link.nav__link_active,
-.nav__link:hover,
-.nav__link:active {
+.nav__link:hover {
     background-color: #000;
     color: #fff;
 
@@ -118,7 +127,7 @@ p {
 }
 
 .nav_active {
-    @media (width < 800px) {
+    @media (width <= 800px) {
         .nav__container {
             display: flex;
             flex-direction: column;
@@ -206,6 +215,7 @@ p {
 .section {
     padding-top: 50px;
     padding-bottom: 50px;
+    scroll-margin-top: 80px;
 }
 
 .section:nth-child(2n) {
